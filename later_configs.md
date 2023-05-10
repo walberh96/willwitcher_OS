@@ -29,5 +29,12 @@ newgrp libvirt
 
 sudo systemctl restart libvirtd
 
+## Set desktop, Lockscreen and Grub backgrounds
+betterlockscreen -u wallpapers/LockScreen.png 
+
+nitrogen /path/to/image/directory/
+
+run the install script inside of wrub
+
 ## INSTALL AND CONFIGURE VM FOR GPU passthrough
 ## WORKING ON THE GUIDE :)
