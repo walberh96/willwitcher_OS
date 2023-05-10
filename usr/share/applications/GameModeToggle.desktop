@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=VM Magic
+Icon=notifications
+Exec=/home/willwitcher/.local/bin/runvmlg.sh
+Categories=Utility;
