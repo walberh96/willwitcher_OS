@@ -39,7 +39,7 @@ Willwitcher OS has the same system requirements as base Arch Linux. It is recomm
 
 ## Installation
 
-You can install Willwitcher OS by following the steps outlined in the Arch Linux Installation Guide. Alternatively, you can use the Arch Linux-based installer, Anarchy, which can be downloaded from the official Anarchy website.
+I'm still working on the ISO so that it has everything set up by default,meanwhile I will leave a guide on how to set up everything manually downloading the source code.
 
 ## Acknowledgments
 
