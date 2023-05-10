@@ -16,4 +16,5 @@ nemo-fileroller-git
 nemo-terminal-git
 noto-color-emoji-fontconfig
 nb
+ly
 
