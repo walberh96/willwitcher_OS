@@ -27,4 +27,4 @@ dunst &
 $HOME/.config/polybar/launch.sh
 xsetroot -cursor_name left_ptr &
 udiskie &
-#signal-desktop &
+
