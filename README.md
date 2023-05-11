@@ -55,4 +55,4 @@ Working on it :)
 
 ## License
 
-Willwitcher OS is licensed under the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html). This means that the OS is free and open
+Willwitcher OS is licensed under the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html). This means that the OS is free and open source.
