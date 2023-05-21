@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo pacman -S --needed firefox kitty picom bspwm polybar rofi 
 sudo pacman -S --needed sxhkd btop neofetch git nitrogen
 sudo pacman -S --needed arandr blanket blueman gimp krita
@@ -8,7 +9,7 @@ sudo pacman -S --needed telegram-desktop micro sxiv zsh
 sudo pacman -S --needed curl rofi-emoji dunst cronie udisks2 
 sudo pacman -S --needed udiskie bluez bluez-utils rofi-calc
 sudo pacman -S --needed wpa_supplicant libreoffice-still
-sudo pacman -S --needed xclip xsel
+sudo pacman -S --needed xclip xsel gnome-boxes
 sudo pacman -S --needed nvidia nvidia-utils lib32-nvidia-utils 
 sudo pacman -S --needed nvidia-settings vulkan-icd-loader 
 sudo pacman -S --needed lib32-vulkan-icd-loader nvidia-prime
@@ -40,6 +41,7 @@ micro -plugin install jump
 micro -plugin install filemanager
 micro -plugin install snippets
 
+: << 'COMMENT'
 mkdir -p /home/willwitcher/gitRepos/ && git clone --recursive https://gitlab.com/cameronnemo/brillo.git /home/willwitcher/gitRepos/
 mkdir -p /home/willwitcher/gitRepos/ && git clone --recursive https://aur.archlinux.org/yay.git /home/willwitcher/gitRepos/
 cd /home/willwitcher/gitRepos/yay/
@@ -54,17 +56,35 @@ mkdir -p /home/willwitcher/.config/ranger
 
 mkdir -p /home/willwitcher/.icons
 mkdir -p /home/willwitcher/.themes
+mkdir -p ~/.local/share/rofi/themes
+mkdir -p /home/willwitcher/.fonts
+mkdir -p ~/.local/bin
 
 yay -S betterlockscreen envycontrol noto-color-emoji-fontconfig nb
 yay -S web-greeter-theme-shikai
-
-systemctl enable bluetooth
-systemctl enable wpa_supplicant
-systemctl enable cronie
+yay -S gradience
+yay -S vscodium-bin
 
 ranger --copy-config=all
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+sudo pacman -S --needed obs-studio nemo nemo-extensions
+
+mkdir -p /home/willwitcher/wallpapers
+cp -r wallpapers/* ~/wallpapers/
+cp -r .fonts/* ~/.fonts/
+
 betterlockscreen -u wallpapers/lockScreen.png
+
+cp -r .local/share/rofi/themes/rounded-common.rasi ~/.local/share/rofi/themes/
+cp -r .local/share/rofi/themes/rounded-purple-dark.rasi ~/.local/share/rofi/themes/
+cp -r .local/bin/* ~/.local/bin/
+cp -r usr/share/applocations/* /usr/share/applications/
+
+systemctl enable bluetooth
+systemctl enable wpa_supplicant
+systemctl enable cronie
+
+COMMENT
