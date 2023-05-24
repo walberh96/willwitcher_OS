@@ -2,6 +2,9 @@
 # Willwitcher OS
 
 Willwitcher OS is a lightweight and powerful Linux distribution based on Arch Linux. It is designed to offer low RAM consumption and is perfect for older or less powerful computers. Willwitcher OS comes with everything ready for gaming on Linux, including Lutris and Steam Proton compatibility layer out of the box. It is specially designed to run games like League of Legends directly on Linux, making it a great choice for gamers.
+## Screenshots
+![Screenshot 1](./screenshots/1.png)
+![Screenshot 2](./screenshots/2.png)
 
 ## Table of Contents
 
