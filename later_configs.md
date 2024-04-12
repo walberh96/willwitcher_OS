@@ -39,3 +39,5 @@ run the install script inside of wrub
 ## INSTALL AND CONFIGURE VM FOR GPU passthrough
 ## WORKING ON THE GUIDE :)
 https://computingforgeeks.com/install-kvm-qemu-virt-manager-arch-manjar/
+https://looking-glass.io/docs/B6/install/
+
