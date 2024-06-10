@@ -208,6 +208,7 @@ wget https://github.com/walberh96/willwitcher_OS/tree/master/wrub_theme.zip
 unzip wrub_theme.zip
 # INSTALL THE THEME
 cd wrub_theme
+chmod +x install.sh
 ./install.sh
 # DELETE FILES 
 cd ..
