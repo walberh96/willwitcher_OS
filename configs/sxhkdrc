@@ -1,14 +1,11 @@
-#
-# wm independent hotkeys
-#
-
 # terminal emulator
 super + Return
 	kitty
 
 # program launcher
 super + d
-	rofi -show drun
+	rofi -show drun -theme $HOME/.config/rofi/launchers/type-1/style-5.rasi
+
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -135,11 +132,11 @@ XF86Sleep
 
 #BRIGTHNESS CONTROL
 
-XF86MonBrightnessDown
-	brillo -q -U 10
+ XF86MonBrightnessDown
+	xbacklight -dec 10
 
 XF86MonBrightnessUp
-	brillo -q -A 10
+	xbacklight -inc 10
 
 #AUDIO CONTROLS
 
@@ -156,8 +153,4 @@ XF86AudioMicMute
 	wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
 alt + Tab
-	rofi -show window
-
-super + shift + e
-	rofi -modi emoji -show emoji
-
+	rofi -show window -theme $HOME/.config/rofi/launchers/type-1/style-5.rasi
