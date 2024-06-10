@@ -176,16 +176,16 @@ fi
 mkdir ~/Wallpapers
 cd ~/Wallpapers
 #Background
-wget https://images8.alphacoders.com/129/1297077.jpg
-mv ~/Wallpapers/1297077.jpg ~/Wallpapers/wallpaper1.jpg
+wget https://github.com/walberh96/willwitcher_OS/tree/master/wallpapers/background.jpeg
+mv ~/Wallpapers/background.jpeg ~/Wallpapers/wallpaper1.jpeg
 #LockScreen
-wget https://images4.alphacoders.com/685/685246.jpg
-mv ~/Wallpapers/685246.jpg ~/Wallpapers/lockscreen.jpg
+wget https://github.com/walberh96/willwitcher_OS/tree/master/wallpapers/lockscreen.png
+mv ~/Wallpapers/lockscreen.png ~/Wallpapers/lockscreen.png
 #Browser
-wget https://images.alphacoders.com/115/1159914.jpg
-mv ~/Wallpapers/1159914.jpg ~/Wallpapers/browser_wallpaper.jpg
+wget https://github.com/walberh96/willwitcher_OS/tree/master/wallpapers/browser.jpg
+mv ~/Wallpapers/browser.jpg ~/Wallpapers/browser_wallpaper.jpg
 
-betterlockscreen -u ~/Wallpapers/lockscreen.jpg
+betterlockscreen -u ~/Wallpapers/lockscreen.png
 
 # Set the rofi theme
 git clone --depth=1 https://github.com/adi1090x/rofi.git
@@ -205,14 +205,23 @@ Categories=Utility;
 EOF
 echo "Desktop entry created successfully."
 
+# GRUB INSTALL
+# Download GRUB THEME
+wget https://github.com/walberh96/willwitcher_OS/tree/master/wrub_theme.zip
+unzip wrub_theme.zip
+# INSTALL THE THEME
+cd wrub_theme
+./install.sh
+# DELETE FILES 
+cd ..
+rm -rf wrub_theme
+rm -rf wrub_theme.zip
 # Additional configurations can be added below
 echo "System configuration completed successfully!"
 
-
-
 # TODO
 # 5. Make an utility for changing the background and for all the things in the desktop
-# GRUB y WILLWITCHER OS MOD
+# WILLWITCHER OS MOD
 # mejorar el tema de la polybar, agregar modulos y hacer las funcionalidades de notificaciones, bluetooth, output switcher, input switcher, screen mirroring script functionality
 
 

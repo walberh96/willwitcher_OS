@@ -28,4 +28,4 @@ $HOME/.config/polybar/launch.sh &
 xsetroot -cursor_name left_ptr &
 
 # Set the wallpaper
-feh --bg-fill ~/Wallpapers/wallpaper1.jpg
+feh --bg-fill ~/Wallpapers/wallpaper1.jpeg
