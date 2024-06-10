@@ -102,31 +102,30 @@ EOF
 chmod +x ~/.config/polybar/launch.sh
 
 # Download the config files from github
-wget https://github.com/walberh96/willwitcher_OS/tree/master/configs/bspwmrc
-wget https://github.com/walberh96/willwitcher_OS/tree/master/configs/config.ini
-wget https://github.com/walberh96/willwitcher_OS/tree/master/configs/dunstrc
-wget https://github.com/walberh96/willwitcher_OS/tree/master/configs/kitty.conf
-wget https://github.com/walberh96/willwitcher_OS/tree/master/configs/sxhkd
+git clone https://github.com/walberh96/willwitcher_OS.git
 
 # Move the config files to the right path
-mv bspwmrc ~/.config/bspwm/
-mv config.ini ~/.config/polybar/
-mv dunstrc ~/.config/dunst/
-mv kitty.conf ~/.config/kitty/
-mv sxhkdrc ~/.config/sxhkd/
+mv willwitcher_OS/configs/bspwmrc ~/.config/bspwm/
+mv willwitcher_OS/configs/config.ini ~/.config/polybar/
+mv willwitcher_OS/configs/dunstrc ~/.config/dunst/
+mv willwitcher_OS/configs/kitty.conf ~/.config/kitty/
+mv willwitcher_OS/configs/sxhkdrc ~/.config/sxhkd/
 
 # Download the fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip
 unzip Hack.zip
 mv Hack /usr/share/fonts/
+rm -rf Hack.zip
 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/NerdFontsSymbolsOnly.zip
 unzip NerdFontsSymbolsOnly.zip
 mv NerdFontsSymbolsOnly /usr/share/fonts/
+rm -rf NerdFontsSymbolsOnly.zip
 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
 unzip Meslo.zip
 mv Meslo /usr/share/fonts/
+rm -rf Meslo.zip
 
 read -p "Do you want to install /home on a separate drive? (Y/N): " install_home
 if [[ "$install_home" == "Y" ]]; then
@@ -176,14 +175,14 @@ fi
 mkdir ~/Wallpapers
 cd ~/Wallpapers
 #Background
-wget https://github.com/walberh96/willwitcher_OS/tree/master/wallpapers/background.jpeg
-mv ~/Wallpapers/background.jpeg ~/Wallpapers/wallpaper1.jpeg
+mv ~/willwitcher_OS/wallpapers/background.jpeg ~/Wallpapers/wallpaper1.jpeg
 #LockScreen
-wget https://github.com/walberh96/willwitcher_OS/tree/master/wallpapers/lockscreen.png
-mv ~/Wallpapers/lockscreen.png ~/Wallpapers/lockscreen.png
+mv ~/willwitcher_OS/wallpapers/lockscreen.png ~/Wallpapers/lockscreen.png
 #Browser
-wget https://github.com/walberh96/willwitcher_OS/tree/master/wallpapers/browser.jpg
-mv ~/Wallpapers/browser.jpg ~/Wallpapers/browser_wallpaper.jpg
+mv ~/willwitcher_OS/wallpapers/browser.jpg ~/Wallpapers/browser_wallpaper.jpg
+
+# DELETE THE FILES
+rm -rf ~/willwitcher_OS
 
 betterlockscreen -u ~/Wallpapers/lockscreen.png
 
