@@ -69,11 +69,8 @@ fi
 
 # Enable the services
 echo "Enabling the services..."
-cp betterlockscreen@.service /usr/lib/systemd/system/
-systemctl --user enable betterlockscreen@$USER
 systemctl --user enable bluetooth
 systemctl --user enable cups
-systemctl --user enable udiskie
 
 # Make the folders for the config files
 mkdir -p ~/.config/bspwm
@@ -113,19 +110,19 @@ mv willwitcher_OS/configs/sxhkdrc ~/.config/sxhkd/
 
 # Download the fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip
-unzip Hack.zip
-mv Hack /usr/share/fonts/
-rm -rf Hack.zip
+mv Hack.zip /usr/share/fonts/
+unzip /usr/share/fonts/Hack.zip
+rm -rf /usr/share/fonts/Hack.zip
 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/NerdFontsSymbolsOnly.zip
-unzip NerdFontsSymbolsOnly.zip
-mv NerdFontsSymbolsOnly /usr/share/fonts/
-rm -rf NerdFontsSymbolsOnly.zip
+mv NerdFontsSymbolsOnly.zip /usr/share/fonts/
+unzip /usr/share/fonts/NerdFontsSymbolsOnly.zip
+rm -rf /usr/share/fonts/NerdFontsSymbolsOnly.zip
 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
-unzip Meslo.zip
-mv Meslo /usr/share/fonts/
-rm -rf Meslo.zip
+mv Meslo.zip /usr/share/fonts/
+unzip /usr/share/fonts/Meslo.zip
+rm -rf /usr/share/fonts/Meslo.zip
 
 read -p "Do you want to install /home on a separate drive? (Y/N): " install_home
 if [[ "$install_home" == "Y" ]]; then
@@ -187,6 +184,7 @@ rm -rf ~/willwitcher_OS
 betterlockscreen -u ~/Wallpapers/lockscreen.png
 
 # Set the rofi theme
+cd
 git clone --depth=1 https://github.com/adi1090x/rofi.git
 cd rofi
 chmod +x setup.sh

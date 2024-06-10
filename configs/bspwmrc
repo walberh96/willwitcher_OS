@@ -26,6 +26,7 @@ flameshot &
 signal-desktop &
 $HOME/.config/polybar/launch.sh &
 xsetroot -cursor_name left_ptr &
+udiskie &
 
 # Set the wallpaper
 feh --bg-fill ~/Wallpapers/wallpaper1.jpeg
