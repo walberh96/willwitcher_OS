@@ -217,6 +217,24 @@ rm -rf wrub_theme.zip
 # Additional configurations can be added below
 echo "System configuration completed successfully!"
 
+# --------------------------------------------------------------------------------------------------------
+# INSTALL Unity && VSCODE with autocomplete 
+yay dotnet-sdk
+sudo pacman -S dotnet-runtime
+sudo pacman -S aspnet-runtime
+# RESTART
+#INSTALL THESE EXTENSIONS IN VSCODE
+#- C#
+#- C# DEV KIT
+#- .NET INSTALL TOOL
+#- IntelliCode for C#
+#- Unity
+# RESTART
+#SET VS CODE AS YOUR EDITOR IN UNITY 
+# REGENERATE PROJECT FILES IN UNITY
+# USE AND ENJOY
+
+
 # TODO
 # 5. Make an utility for changing the background and for all the things in the desktop
 # WILLWITCHER OS MOD
