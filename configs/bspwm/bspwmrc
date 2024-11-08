@@ -2,30 +2,44 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d 󰮯 󰊠 󰮯 󰊠 󰮯
+#bspc monitor -d   󰘐 󱎓 󰨇 
 
+terminal="kitty"
+bspc config focus_follows_pointer true
 bspc config border_width         2
 bspc config window_gap          12
+bspc config focused_border_color "#6292dc"
 
 bspc config split_ratio          0.5
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
-bspc config normal_border_color "#484848"
-bspc config focused_border_color "#34ebeb"
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-#bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+#bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a code desktop='^5'
+#bspc rule -a mplayer2 state=floating
+#bspc rule -a Kupfer.py focus=on
+#bspc rule -a Screenkey manage=off
+bspc rule -a discord desktop = '^5'
+bspc rule -a steam desktop = '^4'
+#bspc rule -a firefox desktop ='^1'
 
-dunst &
-picom &
-xsetroot -cursor_name left_ptr &
-feh --bg-fill ~/Wallpapers/background.jpeg
+#Config second monitor
+bspc monitor HDMI-A-0 -d   󰘐 󱎓
+bspc monitor DisplayPort-0 -d 󰨇 
+
+
+$HOME/.screenlayout/layout200.sh & 
 $HOME/.config/polybar/launch.sh &
+picom &
+dunst &
+udiskie &
+nitrogen --restore &
+xsetroot -cursor_name left_ptr &
 
-#STARTUP APPS
+#Startup apps
 discord &
 steam &
-rog-control-center &
+flameshot &
+nm-applet &
+pasystray &
+blueman-applet &

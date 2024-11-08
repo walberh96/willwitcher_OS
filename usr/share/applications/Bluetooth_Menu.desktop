@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Bluetooth Menu
-Icon=notifications
-Exec=/home/willwitcher/.local/bin/bluetooth_menu.sh
-Categories=Utility;

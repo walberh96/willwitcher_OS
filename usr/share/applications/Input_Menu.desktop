@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Input Menu
-Icon=notifications
-Exec=/home/willwitcher/.local/bin/input_selector.sh
-Categories=Utility;

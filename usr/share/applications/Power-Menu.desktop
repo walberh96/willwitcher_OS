@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Power Menu
-Icon=power
-Exec=/home/willwitcher/.local/bin/powermenu.sh
-Categories=Utility;

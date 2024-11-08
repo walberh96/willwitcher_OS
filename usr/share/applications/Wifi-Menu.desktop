@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Wifi Menu
-Icon=notifications
-Exec=/home/willwitcher/.local/bin/wifi-menu.sh
-Categories=Utility;

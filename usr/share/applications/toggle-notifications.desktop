@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Toggle Notifications
-Icon=notifications
-Exec=/home/willwitcher/.local/bin/toggle_notifications.sh
-Categories=Utility;
